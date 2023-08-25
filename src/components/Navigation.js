@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
-import { useContext } from "react";
 
 const Navigation = () => {
   const { cart } = useContext(CartContext);
@@ -10,7 +9,7 @@ const Navigation = () => {
     <div className="navigation">
       <NavLink to="/">Products</NavLink>
       <NavLink to="/cart">
-        Cart <span>{cart?.length}</span>
+        Cart <span>{cart.length}</span>
       </NavLink>
     </div>
   );
